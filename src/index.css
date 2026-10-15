@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
+
+/* Route dash animation */
+@keyframes dash-move {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-route-dash {
+  animation: dash-move 1.5s linear infinite;
+}
+
+/* Radar scan effect for CCTV */
+@keyframes radar-sweep {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radar-sweep 4s ease-in-out infinite;
+}
+
+/* Rain noise effect */
+@keyframes rain-fall {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+.rain-overlay {
+  background-image: repeating-linear-gradient(105deg, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 18px);
+  animation: rain-fall 0.4s linear infinite;
+}

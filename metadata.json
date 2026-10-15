@@ -1,0 +1,6 @@
+{
+  "name": "Smart Parking Management System Using Computer Vision and Edge AI",
+  "description": "Real-time edge AI parking slot detection and intelligent vacant slot navigation using YOLOv11 on Raspberry Pi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
